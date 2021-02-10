@@ -1,0 +1,54 @@
+footer {
+  background-color: var(--bordeaux);
+
+  box-sizing: border-box;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  min-height: 48px;
+
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer .footer-carrinho {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+footer .qtd-itens {
+  margin-right: 8px;
+  
+  background-color: var(--branco);
+  color: var(--bordeaux);
+  border-radius: 16px;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  height: 24px;
+  width: 32px;
+
+  font-weight: bold;
+  font-size: small;
+}
+
+footer a {
+  color: var(--branco);
+  
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: small;
+}
+
+footer .valor-total {
+  color: var(--branco);
+}

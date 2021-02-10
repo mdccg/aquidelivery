@@ -1,0 +1,106 @@
+.produto {
+  flex-direction: column;
+  display: flex;
+
+  margin-bottom: 16px;
+}
+
+.produto .produto-tronco {
+  flex-direction: row;
+  display: flex;
+  
+  background-color: var(--caucasio);
+  border: 1px solid var(--caucasoide);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  
+  padding: 12px;
+}
+
+.produto .produto-frame { max-width: 37.5%; }
+
+.produto img {
+  border-radius: 8px;
+
+  max-width: 100%;
+  width: 192px;
+
+  object-fit: cover;
+}
+
+.produto .produto-corpo {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+
+  box-sizing: border-box;
+  padding-left: 12px;
+
+  line-height: 1.5;
+}
+
+.produto .produto-corpo .produto-nome { font-weight: bold; }
+
+.produto .produto-corpo .produto-ingredientes {
+  margin-bottom: 8px;
+}
+
+.produto .produto-corpo .produto-tamanho {
+  flex-direction: column;
+  display: flex;
+
+  padding: 8px;
+
+  border: 1px solid var(--nevado);
+  border-bottom-width: 0;
+}
+.produto .produto-corpo .produto-tamanho:last-child {
+  border-bottom-width: 1px;
+}
+
+.produto .produto-corpo .produto-valor {
+  color: var(--verdejante);
+
+  font-weight: 300;
+}
+
+.produto .produto-corpo .produto-ingredientes,
+.produto .produto-corpo .produto-tamanho span:first-child,
+.produto .produto-corpo .produto-valor {
+  font-size: small;
+}
+
+.produto .produto-rodape {
+  background-color: var(--verdejante);
+  color: var(--branco);
+  
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  
+  height: 32px;
+
+  text-transform: uppercase;
+  font-size: small;
+
+  cursor: pointer;
+}
+
+.produto .produto-rodape svg {
+  width: 12px;
+  height: 12px;
+
+  margin-right: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  .produto .produto-corpo .produto-ingredientes,
+  .produto .produto-corpo .produto-tamanho span:first-child,
+  .produto .produto-corpo .produto-valor {
+    font-size: 50%;
+  }
+}

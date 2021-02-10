@@ -1,0 +1,112 @@
+.cardapio-background, .cardapio {
+  background-color: var(--caucasiano);
+
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+.cardapio {
+  background-color: var(--branco);
+  color: var(--alvacento);
+
+  margin: 16px;
+
+  padding: 24px;
+}
+
+.cardapio .titulo {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  text-transform: uppercase;
+  font-weight: 500;
+
+  color: var(--blue-chambray);
+
+  border-bottom-color: var(--alabastrino);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+  padding-bottom: 16px;
+
+  margin-bottom: 32px;
+}
+
+.cardapio .titulo svg {
+  width: 16px;
+  height: 16px;
+
+  fill: var(--blue-chambray);
+
+  margin-right: 8px;
+}
+
+.cardapio .convite { font-weight: 300; }
+
+.cardapio input.pesquisa {
+  margin-top: 24px;
+
+  outline: none;
+
+  border: 1px solid var(--alvo);
+
+  min-height: 32px;
+
+  color: var(--alvacento);
+  
+  padding-left: 16px;
+  padding-right: 16px;
+
+  font-size: medium;
+
+  margin-bottom: 16px;
+}
+
+.cardapio input.pesquisa::placeholder { opacity: .75; }
+
+.cardapio .lista {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+
+  padding: 16px;
+}
+
+/*
+ * testando responsividade
+ */
+/*
+.cardapio .lista {
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.produto-tronco {
+  max-width: 256px;
+}
+*/
+
+.cardapio .tempo-retirada {
+  border: 1px solid var(--caucasoide);
+  background-color: var(--caucasico);
+  border-radius: 16px;
+
+  min-height: 32px;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  font-size: small;
+
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  .cardapio .lista { padding: 0px; }
+
+  .cardapio .tempo-retirada { font-size: 75%; }
+}

@@ -1,0 +1,37 @@
+.qtdficador {
+  flex-direction: row;
+  display: flex;
+
+  min-height: 32px;
+}
+
+.qtdficador button {
+  outline: none;
+
+  background-color: transparent;
+  border: 1px solid var(--niveo);
+
+  font-size: large;
+  color: var(--alvacento);
+
+  width: 32px;
+  height: 32px;
+
+  cursor: pointer;
+}
+
+.qtdficador .painel {
+  background-color: transparent;
+
+  border-width: 0;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-style: solid;
+  border-color: var(--niveo);
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+}

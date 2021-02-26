@@ -1,0 +1,27 @@
+.titulo {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  text-transform: uppercase;
+  font-weight: 500;
+
+  color: var(--blue-chambray);
+
+  border-bottom-color: var(--alabastrino);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+  padding-bottom: 16px;
+
+  margin-bottom: 32px;
+}
+
+.titulo svg {
+  width: 16px;
+  height: 16px;
+
+  fill: var(--blue-chambray);
+
+  margin-right: 8px;
+}

@@ -1,0 +1,105 @@
+.drawer {
+  padding-top: 16px;
+  padding-bottom: 32px;
+
+  max-width: 75vw;
+  width: 384px;
+
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+.drawer img.drawer-logomarca {
+  width: 64px;
+  height: 64px;
+
+  align-self: center;
+  object-fit: cover;
+  display: flex;
+}
+
+.drawer .drawer-convite {
+  border-radius: 16px;
+
+  margin-top: 8px;
+  margin-bottom: 16px;
+
+  align-self: center;
+  display: flex;
+
+  border-width: 1px;
+  border-style: solid;
+}
+
+.drawer .drawer-convite span {
+  box-sizing: border-box;
+  padding: 8px;
+
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.drawer a.drawer-rota { text-decoration: none; }
+
+.drawer .drawer-rota {
+  padding-left: 16px;
+
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  min-height: 48px;
+
+  border-bottom: 1px solid var(--albugineo);
+  color: var(--blue-chambray);
+
+  margin-bottom: 8px;
+}
+
+.drawer .drawer-rota .drawer-icone {
+  margin-right: 8px;
+
+  width: 32px;
+  height: 32px;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.drawer .drawer-rota svg {
+  width: 16px;
+  height: 16px;
+
+  fill: var(--blue-chambray);
+}
+
+.drawer .drawer-rota span {
+  font-weight: 400;
+}
+
+.drawer .drawer-infos { padding: 16px; }
+
+.drawer .drawer-info {
+  flex-direction: column;
+  display: flex;
+
+  line-height: 1.5;
+  font-size: small;
+  color: var(--alvacento);
+
+  margin-bottom: 16px;
+}
+
+.drawer .drawer-info span:first-child {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.drawer img.drawer-badge {
+  width: 64px;
+
+  align-self: center;
+  display: flex;
+}

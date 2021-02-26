@@ -1,0 +1,17 @@
+.tela-background, .tela {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .125);
+  background-color: var(--caucasiano);
+
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+.tela {
+  background-color: var(--branco);
+  color: var(--alvacento);
+
+  margin: 16px;
+
+  padding: 24px;
+}

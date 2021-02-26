@@ -1,0 +1,134 @@
+.modal-comprar-produto {
+  background-color: var(--branco);
+
+  max-width: 100vw;
+  width: 512px;
+}
+
+.modal-comprar-produto ::-webkit-scrollbar { width: 0; }
+
+.modal-comprar-produto .header {
+  background-color: var(--bordeaux);
+  color: var(--branco);
+
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  padding-right: 16px;
+  padding-left: 16px;
+
+  min-height: 64px;
+}
+
+.modal-comprar-produto .header .ico-hitbox {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  width: 32px;
+  height: 32px;
+}
+
+.modal-comprar-produto .header svg {
+  transform: ScaleX(-1);
+
+  width: 12px;
+  height: 12px;
+
+  fill: var(--branco);
+}
+
+.modal-comprar-produto .body {
+  color: var(--alvacento);
+  
+  flex-direction: column;
+  display: flex;
+
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-comprar-produto .frame {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.modal-comprar-produto .frame img {
+  border-radius: 16px;
+  width: 100%;
+
+  margin: 16px;
+  
+  object-fit: cover;
+}
+
+.modal-comprar-produto .dados {
+  flex-direction: column;
+  display: flex;
+
+  line-height: 1.5;
+
+  padding: 16px;
+  padding-top: 0;
+}
+
+.modal-comprar-produto .nome {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.modal-comprar-produto .form-qtd {
+  padding-top: 16px;
+  
+  background-color: var(--caucasio);
+  border-top:    2px dashed var(--caucasoide);
+  border-bottom: 2px solid  var(--caucasoide);
+
+  margin-bottom: 16px;
+}
+
+.modal-comprar-produto label[for='qtd'] {
+  margin-bottom: 4px;
+}
+
+.modal-comprar-produto .footer {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.modal-comprar-produto .valor-total {
+  color: var(--verdejante);
+}
+
+.modal-comprar-produto .btn-comprar {
+  background-color: var(--verdejante);
+  color: var(--branco);
+
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  cursor: pointer;
+}
+
+.modal-comprar-produto .btn-comprar svg {
+  width: 16px;
+  height: 16px;
+
+  fill: var(--branco);
+
+  margin-right: 8px;
+}
+
+.modal-comprar-produto .btn-comprar span {
+  font-size: 75%;
+}

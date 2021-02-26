@@ -1,0 +1,35 @@
+.a-nav-item {
+  color: var(--dracula-orchid);
+  
+  text-decoration: none;
+}
+
+.nav-item {
+  padding: 8px;
+  
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex: 1;
+
+  min-width: 128px;
+}
+
+.nav-item img {
+  width:  64px;
+  height: 64px;
+
+  margin-bottom: 8px;
+}
+
+.nav-item span {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 75%;
+}
+
+.nav-item:hover {
+  background-color: white;
+
+  transition: all .25s;
+}

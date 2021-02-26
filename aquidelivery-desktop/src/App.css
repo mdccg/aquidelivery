@@ -1,0 +1,31 @@
+@import './styles/fonts.css';
+
+:root {
+  --city-lights: #dfe6e9;
+  --soothing-breeze: #b2bec3;
+  --american-river: #636e72;
+  --dracula-orchid: #2d3436;
+}
+
+* {
+  margin: 0;
+}
+
+html, body, #root, .App, .aba {
+  flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

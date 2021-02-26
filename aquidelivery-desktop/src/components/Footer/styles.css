@@ -1,0 +1,48 @@
+.footer {
+  border-top: 1px solid var(--soothing-breeze);
+
+  background-color: var(--city-lights);
+
+  padding-left:  8px;
+  padding-right: 8px;
+
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  overflow-x: auto;
+
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  
+  min-height: 32px;
+  width: 100vw;
+}
+
+.footer .usuario, .footer .copyright {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.footer .divider {
+  background-color: var(--soothing-breeze);
+
+  min-height: 16px;
+  width: 1px;
+
+  margin-left:  8px;
+  margin-right: 8px;
+}
+
+.footer .copyright small {
+  color: var(--american-river);
+}
+
+@media only screen and (max-width: 660px) {
+  .footer small {
+    font-size: 37.5%;
+  }
+}

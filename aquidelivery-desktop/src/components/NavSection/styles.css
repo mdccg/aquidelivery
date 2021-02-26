@@ -1,0 +1,39 @@
+.nav-section {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.nav-section .section {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  /* min-height: 174px; */
+}
+
+.nav-section .title {
+  border-color: var(--soothing-breeze);
+  
+  border-style: solid;
+
+  border-width: 0;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  min-height: 32px;
+}
+
+.nav-section .title span {
+  padding-left:  16px;
+  padding-right: 16px;
+
+  color: var(--american-river);
+  font-size: 75%;
+  opacity: .75;
+}

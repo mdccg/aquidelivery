@@ -1,0 +1,67 @@
+.cardapio .convite { font-weight: 300; }
+
+.cardapio input.pesquisa {
+  margin-top: 24px;
+
+  outline: none;
+
+  border: 1px solid var(--alvo);
+
+  min-height: 32px;
+
+  color: var(--alvacento);
+  
+  padding-left: 16px;
+  padding-right: 16px;
+
+  font-size: medium;
+
+  margin-bottom: 16px;
+}
+
+.cardapio input.pesquisa::placeholder { opacity: .75; }
+
+.cardapio .lista {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+
+  padding: 16px;
+}
+
+/*
+ * testando responsividade
+ */
+/*
+.cardapio .lista {
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.produto-tronco {
+  max-width: 256px;
+}
+*/
+
+.cardapio .tempo-retirada {
+  border: 1px solid var(--caucasoide);
+  background-color: var(--caucasico);
+  border-radius: 16px;
+
+  min-height: 32px;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  font-size: small;
+
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  .cardapio .lista { padding: 0px; }
+
+  .cardapio .tempo-retirada { font-size: 75%; }
+}

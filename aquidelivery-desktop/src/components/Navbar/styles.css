@@ -1,0 +1,12 @@
+.navbar {
+  background-color: var(--city-lights);
+  
+  flex-direction: row;
+  display: flex;
+
+  overflow-x: auto;
+}
+
+.navbar > * {
+  border-right: 1px solid var(--soothing-breeze);
+}

@@ -24,3 +24,8 @@
   font-weight: bold;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Design System';
+  src: url(./../assets/fonts/DesignSystem/DesignSystemB700.ttf);
+}

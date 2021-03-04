@@ -5,22 +5,23 @@ a.header-aba {
 }
 
 .header {
-  background-color: var(--city-lights);
+  background-color: var(--soothing-breeze);
 
-  border-bottom: 1px solid var(--soothing-breeze);
+  border-bottom: 1px solid var(--american-river);
 
   flex-direction: row;
   align-items: center;
   display: flex;
 
   overflow-x: auto;
+  z-index: 1;
 }
 
 .header .header-aba {
   padding-left:  16px;
   padding-right: 16px;
 
-  border-right: 1px solid var(--soothing-breeze);
+  border-right: 1px solid var(--american-river);
 
   justify-content: center;
   align-items: center;

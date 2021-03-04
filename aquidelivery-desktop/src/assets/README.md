@@ -20,10 +20,22 @@
 - [Seasoning - Free food icons](https://www.flaticon.com/free-icon/seasoning_1237063);
 - [Trolley - Free transport icons](https://www.flaticon.com/free-icon/trolley_4047324);
 
+### Financeiro
+
+- [Factory - Free buildings icons](https://www.flaticon.com/free-icon/factory_4281485);
+- [Payment - Free commerce and shopping icons](https://www.flaticon.com/free-icon/;payment_3595938)
+- [Pay - Free commerce and shopping icons](https://www.flaticon.com/free-icon/pay_3050218).
+
+### Configurações
+
+- [Print - Free technology icons](https://www.flaticon.com/free-icon/print_4305624);
+- [Padlock - Free security icons](https://www.flaticon.com/free-icon/padlock_747211);
+- [Backup - Free computer icons](https://www.flaticon.com/free-icon/backup_2818765).
 
 ## Fontes
 
-- [Roboto - Google Fonts](https://fonts.google.com/specimen/Roboto?query=Roboto&preview.text_type=custom).
+- [Roboto - Google Fonts](https://fonts.google.com/specimen/Roboto?query=Roboto&preview.text_type=custom);
+- [Design System.7z - File Upload Script](https://www.gfxfile.com/3oe/Design_System.7z).
 
 ## Paleta de cores
 

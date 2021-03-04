@@ -25,7 +25,7 @@ function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [
     let adicionaisSelecionados = [];
 
     for(let adicional of [...adicionais]) {
-      adicional.qtd = 0;
+      // adicional.qtd = 0;
       adicionaisSelecionados.push(adicional);
     }
 
@@ -33,6 +33,8 @@ function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [
   }
 
   function atualizarQtdAdicionaisSelecionados(qtd, index) {
+    console.table(adicionais);
+
     let _adicionaisSelecionados = [...adicionaisSelecionados];
 
     _adicionaisSelecionados[index]['qtd'] = qtd;
@@ -134,10 +136,10 @@ function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [
 
                     <div className="adicional-qtdficador">
                       <Qtdficador
-                        qtdMin={0}
-                        qtdMax={adicionais[index].qtd}
                         qtd={adicionaisSelecionados[index].qtd}
-                        setQtd={qtd => atualizarQtdAdicionaisSelecionados(qtd, index)} />
+                        setQtd={_qtd => atualizarQtdAdicionaisSelecionados(_qtd, index)}
+                        qtdMax={adicional.qtd}
+                        qtdMin={0} />
                     </div>
                   </div>
                 ))}

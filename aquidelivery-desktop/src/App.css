@@ -20,6 +20,14 @@ html, body, #root, .App, .aba {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+/* .aba {
+  background-image: url(./assets/images/sgp.svg);
+  background-size: contain;
+  background-position: center;
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+} */
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -28,4 +36,8 @@ html, body, #root, .App, .aba {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.redondinho {
+  border-radius: 8px;
 }

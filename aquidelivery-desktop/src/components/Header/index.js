@@ -6,7 +6,7 @@ function Aba({ to = '/', children }) {
   const atual = new RegExp(`${to}`, 'g').test(window.location.pathname);
 
   return (
-    <Link className={`${atual ? 'atual ' : ''}header-aba`} to={to}>
+    <Link className={'redondinho ' + `${atual ? 'atual ' : ''}header-aba`} to={to}>
       <span>{children}</span>
     </Link>
   );
@@ -21,7 +21,6 @@ function Header({ location }) {
       <Aba to="/produtos">Produtos</Aba>
       <Aba to="/financeiro">Financeiro</Aba>
       <Aba to="/configuracoes">Configurações</Aba>
-      <Aba to="/apps">Apps</Aba>
     </div>
   );
 }

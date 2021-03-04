@@ -1,2 +1,0 @@
-- Remover os diretórios tmp/ dos repositórios e referenciar as variáveis ao diretório tmp presente na raiz do projeto;
-- Fazer com que o nome e a logotipo do aplicativo sejam _states_ de fácil alteração.

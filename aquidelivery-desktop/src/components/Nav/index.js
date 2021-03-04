@@ -5,12 +5,20 @@ import CashRegister from './../../assets/images/cash-register.svg';
 import ShoppingCart from './../../assets/images/shopping-cart.svg';
 import ExpressDelivery from './../../assets/images/express-delivery.svg';
 
-import Seasoning from './../../assets/images/seasoning.svg';
-import FastFood from './../../assets/images/fast-food.svg';
-import Trolley from './../../assets/images/trolley.svg';
-import Notes from './../../assets/images/notes.svg';
-import Bacon from './../../assets/images/bacon.svg';
 import Tag from './../../assets/images/tag.svg';
+import Bacon from './../../assets/images/bacon.svg';
+import Notes from './../../assets/images/notes.svg';
+// import Trolley from './../../assets/images/trolley.svg';
+import FastFood from './../../assets/images/fast-food.svg';
+// import Seasoning from './../../assets/images/seasoning.svg';
+
+import Pay from './../../assets/images/pay.svg';
+import Factory from './../../assets/images/factory.svg';
+import Payment from './../../assets/images/payment.svg';
+
+import Print from './../../assets/images/print.svg';
+import Backup from './../../assets/images/backup.svg';
+import Padlock from './../../assets/images/padlock.svg';
 
 import NavbarGenerico from './../../components/NavbarGenerico';
 
@@ -49,18 +57,30 @@ const sections = {
         { to: '/produtos/observacoes', ico: Notes, span: 'Observações' },
         { to: '/produtos/categorias', ico: Tag, span: 'Categorias' }
       ]
+    }
+  ],
+
+  financeiro: [
+    {
+      title: 'Fornecedores',
+      items: [{ to: '/financeiro/fornecedores', ico: Factory, span: 'Fornecedores' }]
     },
     {
-      title: 'Insumos',
+      title: 'Contas a pagar/receber',
       items: [
-        { to: '/produtos/insumos', ico: Seasoning, span: 'Insumos' },
-        { to: '/produtos/insumos/categorias', ico: Tag, span: 'Categorias' }
+        { to: '/financeiro/contas-a-pagar', ico: Pay, span: 'Contas a pagar' },
+        { to: '/financeiro/contas-a-receber', ico: Payment, span: 'Contas a receber' }
       ]
-    },
+    }
+  ],
+
+  configuracoes: [
     {
-      title: 'Estoque',
+      title: 'Configurações',
       items: [
-        { to: '/produtos/estoque/lote', ico: Trolley, span: 'Alterar estoque em lote' }
+        { to: '/configuracoes/impressora', ico: Print, span: 'Impressora' },
+        { to: '/configuracoes/alterar-senha', ico: Padlock, span: 'Alterar minha senha' },
+        { to: '/configuracoes/opcoes-backup', ico: Backup, span: 'Opções de backup' }
       ]
     }
   ]
@@ -68,7 +88,9 @@ const sections = {
 
 const Nav = {
   Principal: () => <NavbarGenerico sections={sections.principal} />,
-  Produtos: () => <NavbarGenerico sections={sections.produtos} />
+  Produtos: () => <NavbarGenerico sections={sections.produtos} />,
+  Financeiro: () => <NavbarGenerico sections={sections.financeiro} />,
+  Configuracoes: () => <NavbarGenerico sections={sections.configuracoes} />
 };
 
 export default Nav;

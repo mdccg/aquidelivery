@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 
 import Principal from './screens/Principal';
 import Produtos from './screens/Produtos';
+import Financeiro from './screens/Financeiro';
+import Configuracoes from './screens/Configuracoes';
 
 const routes = () => (
   <BrowserRouter>
@@ -15,6 +17,8 @@ const routes = () => (
       
       <Route path="/principal" component={Principal} />
       <Route path="/produtos" component={Produtos} />
+      <Route path="/financeiro" component={Financeiro} />
+      <Route path="/configuracoes" component={Configuracoes} />
     </Switch>
 
     <Footer />

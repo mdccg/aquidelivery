@@ -2,7 +2,7 @@
 
 ## Documento de especificação de software
 
-### **Requisitos funcionais**
+### **Alguns requisitos funcionais**
 
 O sistema deverá dispor aos funcionários uma função automática para atender os clientes visitantes e dar baixa no estoque. O pedido não será composto pelas informações do cliente, uma vez que se trata de uma compra instantânea e temporária. Login não será um requisito. Cada produto terá um array de imagens e, ao gosto da empresa, o usuário também poderá cadastrar imagens e seu feedback.
 
@@ -23,8 +23,3 @@ O sistema deverá dispor aos funcionários uma função automática para atender
 - GridFS.
 
 --- 
-
-### **_To-do list_**
-
-- [ ] Mudar número de telefone para CPF;
-- [ ] ```BUG``` [Descobrir por que as quantidades estão sendo zeradas.](./src/components/ModalComprarProduto/index.js) (index.js:22)

@@ -1,0 +1,47 @@
+.background {
+  position: fixed;
+  z-index: -1;
+
+  width:  100%;
+  height: 100%;
+
+  justify-content: center;
+  flex-direction:  column;
+  align-items: center;
+  align-self:  center;
+  display: flex;
+
+  background-color: white;
+}
+
+.background span, .background svg {
+  color: var(--dracula-orchid);
+  fill:  var(--dracula-orchid);
+}
+
+.background span {
+  font-family: 'Design System';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.background .background-logo {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.background .background-logo-span {
+  margin-left: 16px;
+ 
+  font-size: 640%;
+}
+
+.background .background-slogan {
+  align-items: center;
+  display: flex;
+}
+
+.background .background-slogan .background-slogan-span {
+  font-size: 114%;
+}

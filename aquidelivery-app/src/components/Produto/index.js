@@ -4,9 +4,9 @@ import PlusSolid from './../../assets/icons/PlusSolid';
 
 import { toMoney } from 'vanilla-masker';
 
-function Produto({ setAberto, setProduto, _id, nome, ingredientes = [], tamanhos = [], valor, imagem }) {
+function Produto({ setAberto, setProduto, produto: { _id, nome, ingredientes = [], adicionais = [], tamanhos = [], valor, imagem, categoria = {} } }) {
   function abrirModal() {
-    let produto = { _id, nome, ingredientes, tamanhos, valor, imagem };
+    let produto = { _id, nome, ingredientes, adicionais, tamanhos, valor, imagem, categoria };
     setProduto(produto);
     setAberto(true);
   }

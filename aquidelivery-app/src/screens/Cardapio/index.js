@@ -32,7 +32,7 @@ function Cardapio() {
         key={_produto._id}
         setAberto={setAberto}
         setProduto={setProduto}
-        {..._produto} />
+        produto={_produto} />
     ));
   }
 

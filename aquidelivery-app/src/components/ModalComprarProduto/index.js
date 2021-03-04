@@ -8,24 +8,74 @@ import Qtdficador from './../../components/Qtdficador';
 
 import { toMoney } from 'vanilla-masker';
 
-function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [], tamanhos = [], valor, imagem } }) {
+function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [], adicionais = [], tamanhos = [], valor, imagem, categoria = {} } }) {
+  const [tamanho, setTamanho] = useState({});
+
+  const [adicionaisSelecionados, setAdicionaisSelecionados] = useState([]);
+
   const [qtd, setQtd] = useState(1);
   const [qtdMax, setQtdMax] = useState(1);
 
+  const [valorTotal, setValorTotal] = useState(0);
+
+  function iniciarAdicionaisSelecionados() {
+    // FXIME descobrir por que as quantidades estão sendo zeradas
+    console.table(adicionais);
+
+    let adicionaisSelecionados = [];
+
+    for(let adicional of [...adicionais]) {
+      adicional.qtd = 0;
+      adicionaisSelecionados.push(adicional);
+    }
+
+    setAdicionaisSelecionados(adicionaisSelecionados);
+  }
+
+  function atualizarQtdAdicionaisSelecionados(qtd, index) {
+    let _adicionaisSelecionados = [...adicionaisSelecionados];
+
+    _adicionaisSelecionados[index]['qtd'] = qtd;
+    
+    setAdicionaisSelecionados(_adicionaisSelecionados);
+  }
+
+  function handleTamanho(event) {
+    let index = event.target.value;
+    setTamanho(index ? tamanhos[index] : {});
+  }
+
   function getValorTotal() {
-    if(!valor)
+    let valorTotal = 0;
+
+    if(JSON.stringify(tamanhos) === '[]') 
+      valorTotal = qtd * valor;
+    
+    if(JSON.stringify(tamanho) !== '{}')
+      valorTotal = qtd * tamanho.valor;
+
+    setValorTotal(Number(valorTotal).toFixed(2));
+  }
+
+  function printfValorTotal() {
+    if(!valorTotal)
       return 'R$ --,--';
     else
-      return toMoney(Number(valor * qtd).toFixed(2), { unit: 'R$' });
+      return toMoney(valorTotal, { unit: 'R$' });
   }
 
   function getQtdMax() {
-    setQtdMax(10);
+    setQtdMax(10); // TODO back-end aqui
   }
 
   useEffect(() => {
+    iniciarAdicionaisSelecionados();
     getQtdMax();
   }, []);
+
+  useEffect(() => {
+    getValorTotal();
+  }, [tamanho, qtd]);
 
   return (
     <div className="modal-comprar-produto">
@@ -54,6 +104,47 @@ function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [
         </div>
 
         <div className="dados form-qtd">
+          {JSON.stringify(tamanhos) !== '[]' ? (
+            <>
+              <select name="tamanho" onChange={handleTamanho}>
+                <option disabled selected value="">
+                  Selecione um tamanho
+                </option>
+
+                {tamanhos.map((tamanho, index) => (
+                  <option value={index}>{tamanho.tamanho}</option>
+                ))}
+              </select>
+
+              <div style={{ height: '16px' }}>
+                </div>
+            </>
+          ) : <></>}
+
+          {JSON.stringify(tamanho) !== '{}' && JSON.stringify(adicionais) !== '[]' ? (
+            <>
+              <span>Selecione os adicionais.</span>
+              
+              <div className="adicionais">
+                {adicionais.map((adicional, index) => (
+                  <div key={adicional._id} className="adicional">
+                    <div className="adicional-nome">
+                      <span>{adicional.nome}</span>
+                    </div>
+
+                    <div className="adicional-qtdficador">
+                      <Qtdficador
+                        qtdMin={0}
+                        qtdMax={adicionais[index].qtd}
+                        qtd={adicionaisSelecionados[index].qtd}
+                        setQtd={qtd => atualizarQtdAdicionaisSelecionados(qtd, index)} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : <></>}
+
           <label htmlFor="qtd">
             Quantidade <span className="red-dwarf-star-nasa">*</span>
           </label>
@@ -62,9 +153,9 @@ function ModalComprarProduto({ setAberto, produto: { _id, nome, ingredientes = [
         </div>
         
         <div className="dados footer">
-          <span className="valor-total">{getValorTotal()}</span>
+          <span className="valor-total">{printfValorTotal()}</span>
 
-          <div className="btn-comprar">
+          <div className="btn-comprar noselect">
             <ShoppingBasket />
             <span>Comprar</span>
           </div>

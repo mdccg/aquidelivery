@@ -33,7 +33,7 @@ function Header() {
           <img src={Logomarca} alt="Logomarca" />
         </Link>
 
-        <div className="botao-menu noselect" onClick={abrir}>
+        <div className="botao-menu redondinho noselect" onClick={abrir}>
           <MenuButtonOfThreeHorizontalLines />
           <span>Menu</span>
         </div>

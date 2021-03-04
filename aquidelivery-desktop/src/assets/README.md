@@ -17,6 +17,9 @@
 - [Bacon - Free food icons](https://www.flaticon.com/free-icon/bacon_1857861#);
 - [Notes - Free education icons](https://www.flaticon.com/free-icon/notes_858821);
 - [Tag - Free commerce and shopping icons](https://www.flaticon.com/free-icon/tag_3002407);
+- [Seasoning - Free food icons](https://www.flaticon.com/free-icon/seasoning_1237063);
+- [Trolley - Free transport icons](https://www.flaticon.com/free-icon/trolley_4047324);
+
 
 ## Fontes
 

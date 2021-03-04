@@ -5,10 +5,12 @@ import CashRegister from './../../assets/images/cash-register.svg';
 import ShoppingCart from './../../assets/images/shopping-cart.svg';
 import ExpressDelivery from './../../assets/images/express-delivery.svg';
 
-import Tag from './../../assets/images/tag.svg';
-import Bacon from './../../assets/images/bacon.svg';
-import Notes from './../../assets/images/notes.svg';
+import Seasoning from './../../assets/images/seasoning.svg';
 import FastFood from './../../assets/images/fast-food.svg';
+import Trolley from './../../assets/images/trolley.svg';
+import Notes from './../../assets/images/notes.svg';
+import Bacon from './../../assets/images/bacon.svg';
+import Tag from './../../assets/images/tag.svg';
 
 import NavbarGenerico from './../../components/NavbarGenerico';
 
@@ -46,6 +48,19 @@ const sections = {
         { to: '/produtos/complementos', ico: Bacon, span: 'Complementos' },
         { to: '/produtos/observacoes', ico: Notes, span: 'Observações' },
         { to: '/produtos/categorias', ico: Tag, span: 'Categorias' }
+      ]
+    },
+    {
+      title: 'Insumos',
+      items: [
+        { to: '/produtos/insumos', ico: Seasoning, span: 'Insumos' },
+        { to: '/produtos/insumos/categorias', ico: Tag, span: 'Categorias' }
+      ]
+    },
+    {
+      title: 'Estoque',
+      items: [
+        { to: '/produtos/estoque/lote', ico: Trolley, span: 'Alterar estoque em lote' }
       ]
     }
   ]

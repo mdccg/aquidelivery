@@ -10,12 +10,12 @@ function Teste() {
   
   return (
     <Tela>
-      <Titulo>Jonas!</Titulo>
+      <Titulo>o, Mozart...</Titulo>
 
       <button onClick={() => setAberto(true)}>Abrir modal</button>
 
       <Modal open={aberto} setOpen={setAberto}>
-        <span>Jonas!</span>
+        <span>Lacrimosa</span>
       </Modal>
     </Tela>
   );

@@ -33,7 +33,7 @@ function CustomDrawerContent() {
   const [formasPagamento, setFormasPagamento] = useState([]);
 
   function buscarDados() {
-    setAberto(true);
+    setAberto(false);
     setFormasPagamento(['Dinheiro', 'Pix', 'Cartão de débito', 'Cartão de crédito - Visa', 'Cartão de crédito - Mastercard', 'Vale - Sodexo refeição']);
   }
 
@@ -45,8 +45,8 @@ function CustomDrawerContent() {
     <div className="drawer">
       <img src={Logomarca} alt="Logomarca" className="drawer-logomarca" />
 
-      <div className="drawer-convite" style={{ borderColor: theme[aberto ? 'verdejante' : 'bordeaux'] }}>
-        <span style={{ color: theme[aberto ? 'verdejante' : 'bordeaux'] }}>
+      <div className="drawer-convite redondinho" style={{ borderColor: aberto ? theme.verdejante : theme.bordeaux }}>
+        <span style={{ color: aberto ? theme.verdejante : theme.bordeaux }}>
           Estamos {aberto ? 'abertos' : 'fechados'}
         </span>
       </div>

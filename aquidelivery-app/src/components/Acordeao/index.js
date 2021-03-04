@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles.css';
 
+import Plus from './../../assets/icons/Plus';
+import Minus from './../../assets/icons/Minus';
+
 import { withStyles } from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -26,12 +29,10 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(0, 0, 0, .03)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
-    marginBottom: -1,
-    minHeight: 56,
+    backgroundColor: 'var(--alabastrino)',
+    minHeight: 32,
     '&$expanded': {
-      minHeight: 56,
+      minHeight: 32,
     },
   },
   content: {
@@ -48,20 +49,27 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-function Acordeao({ titulo, children }) {
-  const [expanded, setExpanded] = React.useState('panel');
+function Acordeao({ className = '', titulo, children }) {
+  const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
   
   return (
-    <div className="acordeao">
-      <Accordion square expanded={expanded === 'panel'} onChange={handleChange('panel')}>
+    <div className={`acordeao ${className}`}>
+      <Accordion
+        square
+        expanded={expanded === 'panel'}
+        onChange={handleChange('panel')}
+        style={{ border: '1px solid var(--niveo)' }}>
+        
         <AccordionSummary className="acordeao-sumario">
           <Typography>
             {titulo}
           </Typography>
+
+          {expanded === 'panel' ? <Minus /> : <Plus />}
         </AccordionSummary>
         <AccordionDetails>
           {children}

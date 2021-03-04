@@ -26,4 +26,5 @@ O sistema deverá dispor aos funcionários uma função automática para atender
 
 ### **_To-do list_**
 
-- [ ] Mudar número de telefone para CPF.
+- [ ] Mudar número de telefone para CPF;
+- [ ] ```BUG``` [Descobrir por que as quantidades estão sendo zeradas.](./src/components/ModalComprarProduto/index.js) (index.js:22)

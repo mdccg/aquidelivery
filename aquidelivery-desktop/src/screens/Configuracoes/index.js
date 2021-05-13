@@ -1,14 +1,20 @@
 import './styles.css';
 
 import Nav from './../../components/Nav';
+import Header from './../../components/Header';
+import Footer from './../../components/Footer';
+import Background from './../../components/Background';
 
 function Configuracoes() {
   return (
-    <div className="aba configuracoes">
-      <Nav.Configuracoes />
-
-      <span>Configura ae, meu chapa</span>
-    </div>
+    <>
+      <Header />
+      <div className="aba configuracoes">
+        <Nav.Configuracoes />
+        <Background />
+      </div>
+      <Footer />
+    </>
   );
 }
 

@@ -1,17 +1,20 @@
 import './styles.css';
 
 import Nav from './../../components/Nav';
+import Header from './../../components/Header';
+import Footer from './../../components/Footer';
 import Background from './../../components/Background';
 
 function Principal() {
   return (
-    <div className="aba principal">
-      <Nav.Principal />
-
-      {Array(50).fill(<span>Lacrimosa</span>).map(_value => _value)}
-
-      <Background />
-    </div>
+    <>
+      <Header />
+      <div className="aba principal">
+        <Nav.Principal />
+        <Background />
+      </div>
+      <Footer />
+    </>
   );
 }
 

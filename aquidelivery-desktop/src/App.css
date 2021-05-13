@@ -1,6 +1,8 @@
 @import './styles/fonts.css';
 
 :root {
+  --dropheon: #e6e6e6;
+
   --city-lights: #dfe6e9;
   --soothing-breeze: #b2bec3;
   --american-river: #636e72;

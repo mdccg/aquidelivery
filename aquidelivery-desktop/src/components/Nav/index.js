@@ -48,7 +48,7 @@ const sections = {
   produtos: [
     {
       title: 'Produtos',
-      items: [{ to: '/produtos', ico: FastFood, span: 'Produtos' }]
+      items: [{ to: '/produtos/produtos', ico: FastFood, span: 'Produtos' }]
     },
     {
       title: 'Organização de produtos',

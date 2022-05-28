@@ -1,0 +1,16 @@
+O cadastro de clientes é facultativo e eles podem se cadastrar para pagar por
+refeições a prazo.
+
+No banco de dados, cada refeição será guardada pelos seguintes atributos: nome (obrigatório,
+ex.: pizza de calabresa ou coca-cola); ingredientes (facultativo, pois alguns produtos, como
+coca-cola, não têm ingredientes relevantes); adicionais (facultativo, para refeições como
+açaí ex.: creme de avelã, leite condensado, etc); tamanhos (facultativo, caso o produto
+seja pizza ou açaí, ex.: pequena, média, grande, 300ml, 500ml, etc); valor unitário;
+imagem (facultativo); categoria (ex.: lanches, pizzas, açaí, bebidas, etc) e
+quantidade máxima (para refeições prontas ou produtos industrializados, como
+pizza congelada ou coca-cola).
+
+Cada pedido será composto por uma refeição (ex.: pizza de calabresa) com suas respectivas
+configurações (como adicionais, tamanho, etc); além do valor unitário da compra e a
+quantidade de refeições selecionada pelo cliente. Cada cliente terá um carrinho
+específico composto por uma lista de pedidos.

@@ -20,7 +20,7 @@ function Produto({ setAberto, setProduto, produto: { _id, nome, ingredientes = [
 
         <div className="produto-corpo">
           <span className="produto-nome">{nome}</span>
-          <span className="produto-ingredientes">{ingredientes.join(', ')}</span>
+          <span className="produto-ingredientes">{ingredientes.map(ingrediente => ingrediente.nome).join(', ')}</span>
           
           <div className="produto-tamanhos">
             {tamanhos.map((tamanho, indice) => (

@@ -11,20 +11,16 @@ import Produto from './../../components/Produto';
 import Acordeao from './../../components/Acordeao';
 import ModalComprarProduto from './../../components/ModalComprarProduto';
 
-import cardapio from './../../tmp/cardapio'; // TODO substituir
+import api from './../../services/api';
 
 function Cardapio() {
   const [pesquisa, setPesquisa] = useState('');
 
-  const [acai, setAcai] = useState([]);
-  const [pizzas, setPizzas] = useState([]);
-  const [bebidas, setBebidas] = useState([]);
-  const [esfihas, setEsfihas] = useState([]);
-  const [lanches, setLanches] = useState([]);
-
   const [aberto, setAberto] = useState(false);
 
   const [produto, setProduto] = useState({});
+  const [refeicoes, setRefeicoes] = useState({});
+  const [categorias, setCategorias] = useState([]);
 
   function retornaLista(lista) {
     return lista.map(_produto => (
@@ -41,14 +37,22 @@ function Cardapio() {
   }
 
   function buscarDados() {
-    // TODO back-end aqui
-    // let url = `/rota?pesquisa=${pesquisa}`;
+    var refeicoes = {};
+    
+    api.get('/categorias')
+      .then(async res => {
+        let categorias = res.data;
+        setCategorias(categorias);
 
-    setAcai(cardapio['açaí']);
-    setPizzas(cardapio['pizzas']);
-    setBebidas(cardapio['bebidas']);
-    setEsfihas(cardapio['esfihas']);
-    setLanches(cardapio['lanches']);
+        for(let { _id, nome } of categorias) {
+          let url = `/refeicoes?categoria=${_id}`;
+
+          refeicoes[nome] = (await api.get(url)).data;
+        }
+
+        setRefeicoes(refeicoes);
+      })
+      .catch(err => console.error(err));
   }
 
   useEffect(() => {
@@ -70,42 +74,14 @@ function Cardapio() {
           className="pesquisa"
           placeholder="Digite para buscar..." />
 
-        {/* <Acordeao titulo="Teste">
-          <div className="lista">
-            {Array(9).fill(cardapio.lanches[0]).map((lanche, indice) => <Produto key={indice} {...lanche} />)}
-          </div>
-        </Acordeao> */}
-
-        <Acordeao titulo="Lanches">
-          <div className="lista">
-            {retornaLista(lanches)}
-          </div>
-        </Acordeao>
-
-        <Acordeao titulo="Pizzas">
-          <div className="lista">
-            {retornaLista(pizzas)}
-          </div>
-        </Acordeao>
+        {Object.keys(refeicoes).map(categoria => (
+          <Acordeao key={categoria} titulo={categoria}>
+            <div className="lista">
+              {retornaLista(refeicoes[categoria])}
+            </div>
+          </Acordeao>
+        ))}
         
-        <Acordeao titulo="Esfihas">
-          <div className="lista">
-            {retornaLista(esfihas)}
-          </div>
-        </Acordeao>
-        
-        <Acordeao titulo="Açaí">
-          <div className="lista">
-            {retornaLista(acai)}
-          </div>
-        </Acordeao>
-        
-        <Acordeao titulo="Bebidas">
-          <div className="lista">
-            {retornaLista(bebidas)}
-          </div>
-        </Acordeao>
-
         <div style={{ height: '16px' }}>
           </div>
 
@@ -121,7 +97,7 @@ function Cardapio() {
       <Footer />
 
       <Modal open={aberto} setOpen={setAberto}>
-        <ModalComprarProduto setAberto={setAberto} produto={produto} />
+        <ModalComprarProduto setAberto={setAberto} produto={{ ...produto }} />
       </Modal>
     </>
   );

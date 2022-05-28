@@ -1,8 +1,8 @@
 import './styles.css';
 
-function Qtdficador({ qtdMin = 1, qtd = 1, setQtd, qtdMax = 10 }) {
-  const add = () => setQtd(Number(qtd) + 1);
-  const sub = () => setQtd(Number(qtd) - 1);
+function Qtdficador({ qtdMin = 1, qtd = 1, setQtd, index, qtdMax = 10 }) {
+  const add = () => setQtd(Number(qtd) + 1, index);
+  const sub = () => setQtd(Number(qtd) - 1, index);
   
   return (
     <div className="qtdficador">

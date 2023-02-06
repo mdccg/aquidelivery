@@ -20,7 +20,7 @@ As seguintes tecnologias foram utilizadas para desenvolver este app:
 | Protótipo visual | [Figma](https://figma.com/) |
 | Ambiente de execução | [Node](https://nodejs.org/en/) |
 | Linguagem de programação | [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) |
-| Front-end | [React Native](https://reactnative.dev/) |
+| Front-end | [React](https://pt-br.reactjs.org/) |
 | Back-end | [Express.js](https://expressjs.com/pt-br/) |
 | Banco de dados | [MongoDB Atlas](https://cloud.mongodb.com/) |
 | Framework p/ desenvolver desktop GUI | [Electron](https://www.electronjs.org/pt/) |
